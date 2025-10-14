@@ -1,4 +1,3 @@
-import React from 'react'
 import useCart from '../hooks/useCart.jsx'
 import CartProduct from '../components/CartProduct.jsx'
 import EmptyCart from '../components/EmptyCart.jsx'
@@ -8,7 +7,7 @@ function CartPage() {
   const {cart, clearCart} = useCart()
 
   const totalPrice = cart.reduce(
-    (sum, product) => sum + product.price * product.quantity,
+    (acc, product) => acc + product.price * product.quantity,
     0
   )
 

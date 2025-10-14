@@ -1,6 +1,7 @@
 import {FaFacebookF, FaGithub, FaInstagram, FaTwitter} from 'react-icons/fa'
 
 function Footer() {
+
   return (
     <footer className="w-full px-5 py-1 md:py-2 mt-5  bg-gray-100  border-t">
       <div

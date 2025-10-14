@@ -6,7 +6,7 @@ function Filter({products, setFilteredProducts}) {
   const [searchInput, setSearchInput] = useState('')
   const [isOpen, setIsOpen] = useState(false)
 
-  const categories = ['all products', ...new Set(products.map(i => i.category))]
+  const categories = ['all products', ...new Set(products.map(item => item.category))]
 
   useEffect(() => {
     let filteredProducts = products.filter(p => {
@@ -19,12 +19,10 @@ function Filter({products, setFilteredProducts}) {
     })
 
     setFilteredProducts(filteredProducts)
-
   }, [selectedCategory, products, searchInput])
+
   return (
-    <div
-      className="flex flex-col justify-center items-center sm:flex-row gap-4 mx-auto mb-6"
-    >
+    <div className="flex flex-col justify-center items-center sm:flex-row gap-4 mx-auto mb-6">
       <div
         className="relative border border-gray-900 rounded-xl w-[150px] h-[35px] px-3 py-1 flex justify-between items-center bg-white cursor-pointer"
         onClick={() => setIsOpen(prev => !prev)}
@@ -44,14 +42,14 @@ function Filter({products, setFilteredProducts}) {
           <ul
             className="absolute left-0 top-full mt-1 pt-1 border z-30 bg-white rounded-xl shadow-md w-full"
           >
-            {categories.map(i => (
+            {categories.map(item => (
               <li
-                key={i}
+                key={item}
                 className="mb-1"
               >
                 <button
                   type="button"
-                  value={i}
+                  value={item}
                   onClick={e => {
                     e.stopPropagation()
                     setSelectedCategory(e.target.value)
@@ -59,7 +57,7 @@ function Filter({products, setFilteredProducts}) {
                   }}
                   className="capitalize w-full text-left px-3 py-2 hover:bg-gray-200 rounded-lg"
                 >
-                  {i}
+                  {item}
                 </button>
               </li>
             ))}

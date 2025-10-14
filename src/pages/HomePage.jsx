@@ -1,4 +1,3 @@
-import React from 'react'
 import {useNavigate} from 'react-router-dom'
 import useProducts from '../hooks/useProducts.jsx'
 import Rating from '../components/Rating.jsx'
@@ -14,7 +13,7 @@ function HomePage() {
 
   return (
     <div className="max-w-[1240px] px-3 py-3 sm:px-5 sm:py-6 mx-auto text-gray-900 flex flex-col items-center gap-1 sm:gap-3 lg:gap-8 ">
-      <div className="text-center mb-2 xl:mb-10 lg:mb-7 md:mb-3 sm:mb-2 ">
+      <div className="text-center mb-2 xl:mb-5 lg:mb-4 md:mb-3 sm:mb-2 ">
         <h1 className="text-2xl font-bold mb-2   sm:text-3xl md:text-4xl l:mb-2">Welcome to Our Store!</h1>
         <p className="text-gray-700  text-m   md:text-l">
           Discover a selection of high-quality products carefully chosen for you.

@@ -3,6 +3,7 @@ import {IoCartOutline} from 'react-icons/io5'
 
 function EmptyCart() {
   const navigate = useNavigate()
+
   return (
     <div
       className="flex flex-col items-center justify-center py-20 text-center"

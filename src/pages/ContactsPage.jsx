@@ -8,7 +8,6 @@ function ContactPage() {
   function handleSubmit(e) {
     const messageData = {name, email, message}
     e.preventDefault()
-    console.log(messageData)
     alert('Your message has sent')
     setName('')
     setEmail('')
@@ -17,7 +16,6 @@ function ContactPage() {
 
   return (
     <div className="max-w-[1240px] px-3 py-3 sm:px-5 sm:py-6 mx-auto text-gray-900 flex flex-col items-center gap-1 sm:gap-3 lg:gap-8 ">
-
       <div className="text-center mb-4">
         <h1 className=" text-2xl  md:text-3xl  font-bold mb-2">Contact Us</h1>
         <p className="text-gray-700 text-base ">

@@ -11,11 +11,15 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinkClass = ({isActive}) =>
-    isActive ? 'underline underline-offset-4' : ''
+    `inline-block transition-transform duration-200 ${
+      isActive ? 'underline underline-offset-4' : 'hover:scale-105'}`
 
   return (
     <div className="max-w-[1240px] px-3 py-1.5 mx-auto flex justify-between items-center relative text-sm md:text-base">
-      <div className="flex items-center gap-2 md:gap-2.5">
+      <div
+        className="flex items-center gap-2 md:gap-2.5 cursor-pointer"
+        onClick={() => navigate('/')}
+      >
         <HiOutlineShoppingBag className="text-4xl md:text-5xl" />
         <p className="font-semibold text-2xl md:text-3xl">SHOPPER</p>
       </div>

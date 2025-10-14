@@ -1,7 +1,7 @@
 import {useContext} from 'react'
 import {ProductsContext} from '../context/ProductsContext.jsx'
 
-function UseProducts(props) {
+function UseProducts() {
   return (
     useContext(ProductsContext)
   )

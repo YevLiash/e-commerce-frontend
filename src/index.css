@@ -2,25 +2,19 @@
 
 html {
 
-	overflow-y: scroll
+  overflow-y: scroll
 }
 
 body {
-	font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type=number] {
-	-moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
-
-/*.container {*/
-/*	max-width: 1240px;*/
-/*	margin: 0 auto;*/
-/*	padding: 0 20px;*/
-/*}*/

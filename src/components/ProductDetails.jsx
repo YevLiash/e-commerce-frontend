@@ -14,8 +14,6 @@ function ProductDetails() {
   const product = products.find(p => p.id === Number(id) || p.id === id)
   if (!product) return <p>Product not found</p>
 
-  console.log(product)
-
   return (
     <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-6 md:gap-10 mx-auto w-full px-5 mt-4 lg:max-w-[850px]">
 
@@ -53,25 +51,26 @@ function ProductDetails() {
         <div className="mt-8">
           <h2 className="font-semibold">Product Reviews</h2>
           <ul className="flex flex-col gap-3 mt-2">
-            {product.reviews.map(r => {
+            {product.reviews.map(review => {
                 const dateString = '2025-04-30T09:41:02.053Z'
-                const date = new Date(r.date)
+                const date = new Date(review.date)
 
                 const day = date.getDate()
-                const month = date.getMonth() + 1 // месяцы начинаются с 0
+                const month = date.getMonth() + 1
                 const year = date.getFullYear()
                 const reformatDate = `${day}.${month}.${year}`
-                return <li
-                  key={r.id}
+
+                return (<li
+                  key={review.id}
                   className="rounded-2xl p-2 w-full border-gray-300 shadow-lg"
                 >
                   <div className="flex items-center justify-between gap-2 mb-2">
-                    <p>{r.reviewerName}</p>
-                    <Rating value={r.rating} />
+                    <p>{review.reviewerName}</p>
+                    <Rating value={review.rating} />
                   </div>
-                  <p>{r.comment}</p>
+                  <p>{review.comment}</p>
                   <p className="text-sm text-gray-500">{reformatDate}</p>
-                </li>
+                </li>)
               }
             )}
           </ul>

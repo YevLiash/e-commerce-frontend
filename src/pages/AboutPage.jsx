@@ -1,8 +1,8 @@
-import React from 'react'
 import {useNavigate} from 'react-router-dom'
 
 function AboutPage() {
   const navigate = useNavigate()
+
   return (
     <div className="max-w-[1240px] px-3 py-3 sm:px-5 sm:py-6 mx-auto text-gray-900 flex flex-col items-center gap-1 sm:gap-3 lg:gap-8 ">
       <div className="text-center ">
