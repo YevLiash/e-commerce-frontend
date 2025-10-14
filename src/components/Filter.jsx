@@ -23,21 +23,19 @@ function Filter({products, setFilteredProducts}) {
   }, [selectedCategory, products, searchInput])
   return (
     <div
-      onClick={() => setIsOpen(prev => !prev)}
       className="flex flex-col justify-center items-center sm:flex-row gap-4 mx-auto mb-6"
     >
       <div
         className="relative border border-gray-900 rounded-xl w-[150px] h-[35px] px-3 py-1 flex justify-between items-center bg-white cursor-pointer"
+        onClick={() => setIsOpen(prev => !prev)}
       >
         <span className="capitalize">{selectedCategory}</span>
         {isOpen ? (
           <PiCaretUpThin
-            onClick={() => setIsOpen(prev => !prev)}
             className="text-xl"
           />
         ) : (
           <PiCaretDownThin
-            onClick={() => setIsOpen(prev => !prev)}
             className="text-xl"
           />
         )}
