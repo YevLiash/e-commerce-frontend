@@ -1,10 +1,10 @@
-import {useContext} from "react"
-import {ProductsContext} from "../Context/ProductsContext.jsx"
+import {useContext} from 'react'
+import {ProductsContext} from '../context/ProductsContext.jsx'
 
 function UseProducts(props) {
-	return (
-		useContext(ProductsContext)
-	)
+  return (
+    useContext(ProductsContext)
+  )
 }
 
 export default UseProducts

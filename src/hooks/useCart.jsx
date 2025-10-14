@@ -1,10 +1,10 @@
-import {useContext} from "react"
-import {CartContext} from "../Context/CartContext.jsx"
+import {useContext} from 'react'
+import {CartContext} from '../context/CartContext.jsx'
 
 function useCart() {
-	return (
-		useContext(CartContext)
-	)
+  return (
+    useContext(CartContext)
+  )
 }
 
 export default useCart

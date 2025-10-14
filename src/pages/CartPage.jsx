@@ -46,7 +46,7 @@ function CartPage() {
               Total: <span className="text-2xl">{totalPrice.toFixed(2)} $</span>
             </p>
             <button
-              className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 hover:scale-105 transition-transform duration-300"
+              className="cursor-pointer px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 hover:scale-105 transition-transform duration-300"
             >
               Pay Now
             </button>

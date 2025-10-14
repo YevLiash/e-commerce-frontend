@@ -76,7 +76,7 @@ function HomePage() {
 
       <button
         onClick={() => navigate('/products')}
-        className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition text-lg sm:text-base"
+        className="px-6 py-2 bg-gray-900 text-white rounded-lg cursor-pointer hover:bg-gray-700 transition text-lg sm:text-base"
       >
         Want more?
       </button>
