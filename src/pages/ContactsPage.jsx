@@ -1,17 +1,22 @@
 import {useState} from 'react'
+import {LuMailCheck} from 'react-icons/lu'
 
 function ContactPage() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [isSent, setIsSent] = useState(false)
 
   function handleSubmit(e) {
     const messageData = {name, email, message}
     e.preventDefault()
-    alert('Your message has sent')
+
     setName('')
     setEmail('')
     setMessage('')
+
+    setIsSent(true)
+    setTimeout(() => setIsSent(false), 3000)
   }
 
   return (
@@ -30,6 +35,7 @@ function ContactPage() {
         <label htmlFor="name"></label>
         <input
           type="text"
+          required
           name="name"
           value={name}
           onChange={e => setName(e.target.value)}
@@ -39,6 +45,7 @@ function ContactPage() {
         <label htmlFor="email"></label>
         <input
           type="email"
+          required
           name="email"
           placeholder="E-mail"
           value={email}
@@ -47,6 +54,7 @@ function ContactPage() {
         />
         <label htmlFor="message"></label>
         <textarea
+          required
           name="message"
           placeholder="Your message"
           value={message}
@@ -59,6 +67,11 @@ function ContactPage() {
         >Send
         </button>
       </form>
+      {isSent && (
+        <div className="flex gap-2 items-center mt-2 mx-auto   text-gray-900 px-4 py-2 rounded-lg shadow-lg transition-all duration-500 z-50">
+          <LuMailCheck /> Your message has been sent!
+        </div>
+      )}
     </div>
   )
 }

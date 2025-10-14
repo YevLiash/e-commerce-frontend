@@ -52,7 +52,6 @@ function ProductDetails() {
           <h2 className="font-semibold">Product Reviews</h2>
           <ul className="flex flex-col gap-3 mt-2">
             {product.reviews.map(review => {
-                const dateString = '2025-04-30T09:41:02.053Z'
                 const date = new Date(review.date)
 
                 const day = date.getDate()
