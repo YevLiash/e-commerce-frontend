@@ -45,17 +45,21 @@ function Navbar() {
 
       <div className="flex items-center gap-3 md:gap-5">
         <div className="relative">
-          <IoCartOutline
-            onClick={() => navigate('/cart')}
-            className="text-3xl md:text-4xl p-1 cursor-pointer transition-transform duration-200 hover:scale-105"
-          />
+          <NavLink to="/cart">
+            <IoCartOutline
+              className="text-3xl md:text-4xl p-1 cursor-pointer transition-transform duration-200 hover:scale-105"
+            />
+          </NavLink>
+
           {cart.length > 0 && (
             <p className="absolute right-[-8px] top-[-6px] text-xs md:text-sm rounded-full px-1.5 bg-gray-800 text-white">
               {totalProductQuantity}
             </p>
           )}
         </div>
-        <FaRegUser className="text-2xl md:text-3xl p-1 cursor-pointer transition-transform duration-200 hover:scale-105" />
+        <NavLink to="#">
+          <FaRegUser className="text-2xl md:text-3xl p-1 cursor-pointer transition-transform duration-200 hover:scale-105" />
+        </NavLink>
         <FaBars
           onClick={() => setIsOpen(prev => !prev)}
           className="text-2xl md:hidden cursor-pointer p-1  rounded transition-transform duration-200 hover:scale-105"
