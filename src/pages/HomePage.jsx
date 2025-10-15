@@ -45,8 +45,6 @@ function HomePage() {
                   cursor-pointer flex flex-col justify-between
                   border border-gray-300 rounded-2xl shadow-md
                   p-4 w-60 h-65 hover:shadow-lg transition
-                  lg:w-56
-                  md:w-64
                   sm:w-full sm:h-auto
                 "
               >
